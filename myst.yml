@@ -27,7 +27,7 @@ bibliography:
   - references.bib
 
 site:
-  base_Url: /Manual # Arregla el error de estilos y raiz.
+  #base_Url: /Manual # Arregla el error de estilos y raiz. 
   template: book-theme
   # options:
   #   favicon: favicon.ico

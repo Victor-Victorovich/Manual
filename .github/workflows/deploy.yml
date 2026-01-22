@@ -21,8 +21,10 @@ jobs:
         run: npm install -g mystmd
 
       - name: Build HTML
-        # Aquí inyectamos el nombre del repo como BASE_URL para MyST
-        run: myst build --html --base-url /${{ github.event.repository.name }}
+        # En MyST v2 usamos la variable de entorno BASE_URL
+        run: myst build --html
+        env:
+          BASE_URL: /${{ github.event.repository.name }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
